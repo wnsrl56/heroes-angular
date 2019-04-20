@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="control-container">
+    <button
+      (click)="changeDetailAll(isShowAll, isShowDetail)"
+    >
+      All Detail {{ allText }}
+    </button>
+  </div>
+  <ng-container
+    *ngFor="let hero of heroes; index as i;"
+    >
+    <div class="item">
+      <div
+        style="width: 80%"
+      >
+        <span>
+          {{hero.name | uppercase}}
+        </span>
+      </div>
+      <div
+
+      >
+        <button
+          (click)="changeDetail(i, isShowDetail)"
+        >
+         Detail
+        </button>
+      </div>
+    </div>
+    <div
+      *ngIf="isShowDetail[i]"
+      class="input"
+    >
+      <label>id:
+        <input [(ngModel)]="hero.id" placeholder="id" />
+      </label>
+      <label>name:
+        <input [(ngModel)]="hero.name" placeholder="name" />
+      </label>
+    </div>
+  </ng-container>
+</div>

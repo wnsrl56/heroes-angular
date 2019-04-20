@@ -1,0 +1,39 @@
+.container {
+  color: #304FFE;
+  font-family: sans-serif;
+  font-size: 13px;
+  width: 350px;
+}
+.item {
+  display: flex;
+  padding: 15px 3px;
+
+  span {
+    padding: 2px 10px;
+    vertical-align: middle;
+  }
+  button {
+    width: 5em;
+    outline: none;
+    border-radius: 4px;
+    border: 1px #0288D1 solid;
+    background-color: #29B6F6;
+    color: #01579B;
+    -webkit-appearance: none;
+
+    &:hover {
+      background-color: #0091EA;
+    }
+  }
+}
+.input {
+  padding: 10px 15px;
+
+  label {
+    padding: 0 5px;
+  }
+  input {
+    height: 18px;
+    width: 110px;
+  }
+}
