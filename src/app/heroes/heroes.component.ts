@@ -12,8 +12,6 @@ export class HeroesComponent implements OnInit {
   public isShowAll = false;
   public allText = 'Open';
   constructor() {
-    this.heroes = this.generateHeroes(Heroes);
-    this.isShowDetail = this.range(this.heroes.length).map(_ => false);
   }
   private generateHeroes = (heroes: any[]) => heroes.map((v, index) => new Hero(index, v.name));
   private changeDetail = (index, isShowDetail) => isShowDetail[index] = !isShowDetail[index];
@@ -31,5 +29,7 @@ export class HeroesComponent implements OnInit {
     return res;
   }
   ngOnInit() {
+    this.heroes = this.generateHeroes(Heroes);
+    this.isShowDetail = this.range(this.heroes.length).map(_ => false);
   }
 }
